@@ -1,0 +1,63 @@
+@import "submarineStyles.css";
+
+/* 20px = 1m */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to top, #87ceeb, #d7d7d7);
+    overflow: hidden;
+    filter: grayscale(0.3) sepia(5%);
+    /*filter: invert(1) hue-rotate(180deg) brightness(0.2);*/
+}
+
+#ocean {
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    width: 100%;
+    height: 40000px;
+    background: linear-gradient(to bottom, #85bae0, #000515);
+}
+
+#deepVoid {
+    position: absolute;
+    top: 40000px;
+    left: 0;
+    width: 100%;
+    height: 10000px;
+    background: linear-gradient(to bottom, #000515, #000000);
+}
+
+.cloud img {
+    position: absolute;
+    width: 300px;
+    opacity: 0.8;
+}
+
+#controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #656565;
+    border: 10px solid black;
+}

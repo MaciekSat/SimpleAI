@@ -2,13 +2,14 @@ import Neuron from './Neuron.js';
 
 export default class NeuralNetwork {
     constructor() {
-        this.sensorsCount = 5 + 3; // 5 front sensors + 3 back sensors
-        this.outputsCount = 4; // forward, left, right, backward
+        this.sensorsCount = 0; // initial value depends on inputs
+        this.outputsCount = 4; // forward, left, right, backward or other actions
         this.hiddenLayers = 4;
         this.layers = [];
     }
     
-    createLayers() {
+    createLayers(inputsCount) {
+        this.sensorsCount = inputsCount;
         // create empty layers
         for (let i = 0; i < this.hiddenLayers + 2; i++) {
             let layer = [];
